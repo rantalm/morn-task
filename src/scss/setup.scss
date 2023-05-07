@@ -1,0 +1,21 @@
+@mixin atSmall {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+$color-text: #23445a;
+$color-success: #18c746;
+$color-note: #0084f4;

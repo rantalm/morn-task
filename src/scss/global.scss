@@ -1,0 +1,91 @@
+@import '@/scss/setup';
+
+html,
+*,
+*::after,
+*::before,
+input,
+textarea {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+input,
+textarea,
+a,
+button {
+  font-family: almoni-tzar-regular, sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  direction: rtl;
+}
+
+.f-normal {
+  font-family: almoni-tzar-regular;
+}
+.f-bold {
+  font-family: almoni-tzar-bold;
+}
+.f-n {
+  font-family: almoni-neue-dl;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include atMedium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.btn {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: almoni-neue-dl;
+  border-radius: 4rem;
+  border: 1px solid;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: 5.6rem;
+  width: fit-content;
+  background: none;
+  cursor: pointer;
+
+  &--success {
+    background-color: $color-success;
+    border: 0;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($color-success, 10%);
+    }
+  }
+
+  &--icon {
+    &::after {
+      content: url('@/assets/img/Google_G.svg');
+      height: 3rem;
+      width: 3rem;
+      margin-right: 1.25rem;
+    }
+  }
+}
